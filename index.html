@@ -64,7 +64,10 @@
           var items = new vis.DataSet(data);
 
           // Configuration for the Timeline
-          var options = {};
+          var options = {
+            zoomMin: 1000*3600*24*90, // three months in milliseconds
+            zoomMax: 1000*3600*24*356*3 // three months in milliseconds
+          };
 
           // Create a Timeline
           var timeline = new vis.Timeline(container, items, options);
