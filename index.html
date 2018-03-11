@@ -1,58 +1,83 @@
 <!DOCTYPE HTML>
 <html>
-<head>
-  <title>Timeline | External data</title>
+  <head>
+    <title>Seerah Timele | OpenIslam</title>
 
-  <style type="text/css">
-    body, html {
-      font-family: sans-serif;
-    }
-  </style>
 
-  <!-- Load jquery for ajax support -->
-  <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
-  <script src="js/vis.js"></script>
-  <link href="js/vis-timeline-graph2d.min.css" rel="stylesheet" type="text/css" />
+    <link href="js/vis-timeline-graph2d.min.css" rel="stylesheet" type="text/css" />
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 
-</head>
-<body>
-<p>
-  This demo shows how to load external data via an ajax call.
-</p>
-<div id="visualization"></div>
-<div id="loading">loading...</div>
+    <link rel="stylesheet" href="css/master.css">
+  </head>
 
-<script type="text/javascript">
-  // load data via an ajax request. When the data is in, load the timeline
-  $.ajax({
-    url: 'data/basic.json',
-    success: function (data) {
-      // hide the "loading..." message
-      document.getElementById('loading').style.display = 'none';
 
-      // DOM element where the Timeline will be attached
-      var container = document.getElementById('visualization');
+  <body class="text-center">
+    <div class="container">
+      <div class="jumbotron">
 
-      // Create a DataSet (allows two way data-binding)
-      var items = new vis.DataSet(data);
+        <h1 class="display-4">Seerah Timeline</h1>
 
-      // Configuration for the Timeline
-      var options = {};
+        <p class="lead"> A timeline of the biography of the prophet Muhammed PBUH.</p>
 
-      // Create a Timeline
-      var timeline = new vis.Timeline(container, items, options);
-    },
-    error: function (err) {
-      console.log('Error', err);
-      if (err.status === 0) {
-        alert('Failed to load data/basic.json.\nPlease run this example on a server.');
-      }
-      else {
-        alert('Failed to load data/basic.json.');
-      }
-    }
-  });
-</script>
-</body>
+      </div>
+
+      <div id="visualization"></div>
+      <div id="loading">loading...</div>
+
+    </div>
+    <footer class="footer mt-auto">
+      <div class="inner">
+        <p>Made with <span class="fa fa-heart"></span> by Muslims @ <a href="https://github.com/OpenIslam">OpenIslam</a>.</p>
+      </div>
+    </footer>
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <!-- Load jquery for ajax support -->
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="js/vis.js"></script>
+    <script type="text/javascript">
+      // load data via an ajax request. When the data is in, load the timeline
+      $.ajax({
+        url: 'data/basic.json',
+        success: function (data) {
+          // hide the "loading..." message
+          document.getElementById('loading').style.display = 'none';
+
+          // DOM element where the Timeline will be attached
+          var container = document.getElementById('visualization');
+
+          // Create a DataSet (allows two way data-binding)
+          var items = new vis.DataSet(data);
+
+          // Configuration for the Timeline
+          var options = {};
+
+          // Create a Timeline
+          var timeline = new vis.Timeline(container, items, options);
+        },
+        error: function (err) {
+          console.log('Error', err);
+          if (err.status === 0) {
+            alert('Failed to load data/basic.json.\nPlease run this example on a server.');
+          }
+          else {
+            alert('Failed to load data/basic.json.');
+          }
+        }
+      });
+    </script>
+  </body>
 </html>
