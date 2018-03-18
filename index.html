@@ -14,6 +14,24 @@
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 
     <link rel="stylesheet" href="css/master.css">
+
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.min.js"></script>
+    <script id="item-template" type="text/x-handlebars-template">
+      <table class="seerah-item">
+        <tr>
+          <th class="title">{{title}}</th>
+        </tr>
+        <tr>
+          <td class="hijri-date">{{hijri-date}}</td>
+        </tr>
+        <tr>
+          <td class="commentary"> {{commentary}} </td>
+        </tr>
+        <tr>
+          <td class="notes"> {{notes}} </td>
+        </tr>
+      </table>
+    </script>
   </head>
 
 
@@ -56,6 +74,8 @@
         success: function (data) {
           // hide the "loading..." message
           document.getElementById('loading').style.display = 'none';
+          var source = document.getElementById('item-template').innerHTML;
+          var template = Handlebars.compile(document.getElementById('item-template').innerHTML);
 
           // DOM element where the Timeline will be attached
           var container = document.getElementById('visualization');
@@ -71,7 +91,9 @@
             // max: new Date(700, 0, 1), // set maximum Date
 
             zoomMin: 1000*3600*24*10, // 7 days in milliseconds
-            zoomMax: 1000*3600*24*356*3 // three years in milliseconds
+            zoomMax: 1000*3600*24*356*3, // three years in milliseconds
+
+            template: template
           };
 
           // Create a Timeline

@@ -15,3 +15,21 @@ body {
   line-height: 40px; /* Vertically center the text there */
   background-color: #f5f5f5;
 }
+.vis-item .vis-item-overflow {
+  overflow: visible;
+}
+table {
+}
+.notes {
+  font-style: italic;
+  font-size: x-small;
+}
+.title {
+  font-weight: bold;
+}
+.hijri-date {
+  font-weight: lighter;
+}
+.commentary {
+  font-size: smaller;
+}
