@@ -1,27 +1,42 @@
 [
   {
     "title": "Birth of the Prophet Muhammad PBUH",
-    "commentary": "He was named by his grandfather 'Abdul-Muttalib",
+    "commentary": [
+      "He was named by his grandfather 'Abdul-Muttalib"
+    ],
     "notes": "",
+    "hijri-date": "",
     "start": "0571-04-20"
   },
   {
     "title": "Circumcision",
-    "commentary": "His grandfather circumcised him on his seventh day as was the custom of the Arabs",
+    "commentary": [
+      "His grandfather circumcised him on his seventh day as was the custom ",
+      "of the Arabs"
+    ],
     "notes": "",
+    "hijri-date": "",
     "start": "0571-04-27"
   },
   {
     "title": "Nursed by Thuyebah",
-    "commentary": "",
+    "commentary": [
+      "Thuyebah was the first wet nurse of PBUH"
+    ],
     "notes": "(Approximate dates)",
+    "hijri-date": "",
     "start": "0571-04-30",
     "end" : "0571-05-30"
   },
   {
     "title": "Nursed by Haleema As-Sa'diyah",
-    "commentary": "She was supposed to return him after 2 years, but she requested that PBUH stays with her longer due to all the blessings she was witenessing. He stayed with her untill he was 4 or 5 years old",
+    "commentary": [
+      "She was supposed to return him after 2 years but she requested that ",
+      "PBUH stays with her longer due to all the blessings she was ",
+      "witenessing.He stayed with her untill he was 4 or 5 years old"
+    ],
     "notes": "(Approximate dates)",
+    "hijri-date": "",
     "start": "0571-06-01",
     "end": "0576-05-30"
   }
