@@ -18,8 +18,19 @@ As an open-source project, all contributions are welcome.
 All data is stored in [seerah.json](data/seerah.json) in a JSON format.
 
 To add an event, please make sure these fields are filled properly:
-
-1. ***TODO***
+```json
+{
+  "title": "name of the event",
+  "commentary": [
+    "multiline more details ",
+    "about the event"
+  ],
+  "notes": "notes from the author",
+  "hijri-date": "date in hijri",
+  "start": "0571-04-20", /* needs to be in Gregorian (for now) */
+  "end": "0571-04-21" /* if any */
+}
+```
 
 ### 2. Project
 For the sack of simplicity and to maximize contributions, it is required to keep the project as minimalist as possible.
