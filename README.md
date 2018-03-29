@@ -33,7 +33,7 @@ To add an event, please make sure these fields are filled properly:
 ```
 
 ### 2. Project
-For the sack of simplicity and to maximize contributions, it is required to keep the project as minimalist as possible.
+For the sake of simplicity and to maximize contributions, it is required to keep the project as minimalist as possible.
 Please head to the **Issues** section and see if you can tackle any of the known bugs.
 
 ## Licensing
