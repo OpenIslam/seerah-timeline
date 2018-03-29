@@ -91,11 +91,17 @@
           var options = {
             // start: new Date(550, 0, 1),
             // end: new Date(700, 0, 1),
-            min: new Date(560, 0, 1), // set minimum Date
+            min: new Date(550, 0, 1), // set minimum Date
             // max: new Date(700, 0, 1), // set maximum Date
 
-            zoomMin: 1000*3600*24*10, // 7 days in milliseconds
-            zoomMax: 1000*3600*24*356*10, // three years in milliseconds
+            // zoomMin: 1000*3600*24*10, // 7 days in milliseconds
+            // zoomMax: 1000*3600*24*356*10, // three years in milliseconds
+
+            // width: '640px',
+            height: '720px',
+            horizontalScroll: true,
+            zoomable: false,
+            // orientation: { axis: 'none' },
 
             template: template
           };
